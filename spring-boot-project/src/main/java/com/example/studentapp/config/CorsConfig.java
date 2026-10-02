@@ -1,0 +1,23 @@
+package com.example.studentapp.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+/**
+ * Global Cross-Origin Resource Sharing (CORS) Configuration.
+ * Allows frontend applications (such as standalone index.html opened via file://,
+ * Live Server, or modern web frameworks) to communicate freely with the backend REST API.
+ */
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**")
+                .allowedOrigins("*") // In production, specify exact domains e.g., "http://localhost:3000"
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .maxAge(3600);
+    }
+}

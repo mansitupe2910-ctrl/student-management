@@ -1,0 +1,6 @@
+{
+  "name": "Student Management System - Spring Boot & Vanilla JS",
+  "description": "Complete beginner-friendly full-stack application featuring Java Spring Boot, Spring Data JPA, H2 Database, and a modern single-page HTML5/Vanilla JS frontend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
